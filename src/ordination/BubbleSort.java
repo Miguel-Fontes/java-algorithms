@@ -15,11 +15,11 @@ public class BubbleSort
     List<Integer> listaOrdenada = ArrayTools.ArrayCopy(lista);
     for (int i = listaOrdenada.size() - 1; i >= 0; i--) {
       for (int j = i + 1; j < listaOrdenada.size(); j++) {
-        while (((Integer)listaOrdenada.get(j)).intValue() < ((Integer)listaOrdenada.get(j - 1)).intValue())
+        while ((listaOrdenada.get(j)) < (listaOrdenada.get(j - 1)))
         {
-          int aux = ((Integer)listaOrdenada.get(j)).intValue();
+          int aux = (listaOrdenada.get(j));
           listaOrdenada.set(j, listaOrdenada.get(j - 1));
-          listaOrdenada.set(j - 1, Integer.valueOf(aux));
+          listaOrdenada.set(j - 1, aux);
         }
       }
     }

@@ -12,17 +12,19 @@ package mathematics;
 public class SquareRoot {
 
     public static double bisection(Integer operand, double precision) {
-        double average = 0.0D;
+        double average = 0;
+        double upperLimit = operand * operand;
+        double lowerLimit = 0;
 
-        double upperLimit = operand.intValue() * operand.intValue();
-        double lowerLimit = 0.0D;
         while (upperLimit - lowerLimit > precision) {
-            average = (lowerLimit + upperLimit) / 2.0D;
-            if (average * average > operand.intValue()) {
+            average = (lowerLimit + upperLimit) / 2;
+
+            if (average * average > operand) {
                 upperLimit = average;
             } else {
                 lowerLimit = average;
             }
+            
         }
         return average;
     }
