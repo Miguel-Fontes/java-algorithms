@@ -16,12 +16,12 @@ import java.util.List;
 
 public class ArrayTools
 {
-  public static List ArrayCopy(List<Integer> lista)
+  public static List ArrayCopy(List<Integer> list)
   {
-    List<Integer> novaLista = new ArrayList();
-    for (Integer item : lista) {
-      novaLista.add(item);
+    List<Integer> newList = new ArrayList();
+    for (Integer item : list) {
+      newList.add(item);
     }
-    return novaLista;
+    return newList;
   }
 }
